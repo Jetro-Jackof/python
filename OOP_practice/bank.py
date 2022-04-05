@@ -67,8 +67,35 @@ def options(user2):
             break
         else:
             print("Please chose a number from 1 to 6")
+def bank_creation(name):
+    balance = float(input(f"{name.name.title()} Your account balance is:"))
+    return balance
 
-            
+while True:
+    print(f"Welcome to bank_name")
+    name = input("Enter your name")
+    age = int(input("Enter your age"))
+    user_one = User(name,age)
+    user_two = None
+    new_user = input("Would you like to register a new user? Type No ")
+    if new_user.lower() = 'yes':
+        name= input("Enter the second person's name: ")
+        age = int(input("Enter the second person's age:"))
+        user_two= User(name, age) 
+        print("Thank you for register a secod user ")
+        user_one_balance =  bank_creation(user_one.name)
+        user_two_balance =  bank_creation(user_two.name)
+        user_one_bank= Bank(user_one.name, user_one.age,user_one.balance)
+        user_two_bank= Bank(user_two.name, user_two.age,user_two.balance)
+        flag = options(user_two)
+        if flag == False:
+            break
+    else:
+        user_one_balance = bank_creation(user_one.name)
+        user_one_bank = Bank(user_one.name,user_one.age, user_one.balance)
+        flag = options(user_two)
+        if flag == False:
+            break
 
 
 
